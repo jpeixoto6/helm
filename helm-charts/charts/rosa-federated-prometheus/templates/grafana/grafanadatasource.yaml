@@ -1,0 +1,21 @@
+apiVersion: integreatly.org/v1alpha1
+kind: GrafanaDataSource
+metadata:
+  name: federated
+  labels:
+    {{- include "rosa-federated-prometheus.labels" . | nindent 4 }}
+spec:
+  name: federated-prometheus.yaml
+  datasources:
+    - access: proxy
+      editable: false
+      isDefault: true
+      basicAuth: true
+      basicAuthPassword: "{{ index .Values "prometheus-cr" "basicAuthPassword" }}"
+      basicAuthUser: "{{ index .Values "prometheus-cr" "basicAuthUsername" }}"
+      jsonData:
+        timeInterval: 5s
+        tlsSkipVerify: true
+      name: prometheus
+      type: prometheus
+      url: 'https://{{ .Release.Name }}-prometheus-cr.{{ .Release.Namespace }}.svc.cluster.local:9091'
