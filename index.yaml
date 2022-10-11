@@ -1,0 +1,16 @@
+apiVersion: v1
+entries:
+  aro-machinesets:
+  - apiVersion: v2
+    created: "2022-10-11T14:25:47.311309232-03:00"
+    description: A Helm chart to configure machinesets for ARO
+    digest: 49c984ba250db525c01143d06f6847713527a595dfdf6f64969cc65f929b7444
+    home: https://github.com/rh-mobb/helm-charts
+    maintainers:
+    - name: paulczar
+    name: aro-machinesets
+    type: application
+    urls:
+    - https://github.com/jpeixoto6/helm.git/aro-machinesets-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-10-11T14:25:47.310887887-03:00"
