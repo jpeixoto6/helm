@@ -5,7 +5,7 @@ entries:
     created: "2022-10-12T20:51:27.705188493Z"
     description: A Helm chart to configure machinesets for ARO
     digest: 4845a0eab554a0c77082270f0c53b843f605dc4fb6eca4b828ba388e67122f04
-    home: https://github.com/rh-mobb/helm-charts
+    home: https://github.com/jpeixoto6/helm.git
     maintainers:
     - name: paulczar
     name: aro-machinesets
