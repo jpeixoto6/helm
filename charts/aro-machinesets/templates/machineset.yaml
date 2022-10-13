@@ -25,6 +25,7 @@ metadata:
     machine.openshift.io/cluster-api-machine-type: {{ $.Values.machineRole }}
     machine.openshift.io/cluster-api-machineset: {{ $cluster.spec.infraId }}-{{ $cluster.spec.location }}-{{ . }}
   name: {{ $cluster.spec.infraId }}-{{ $name }}-{{ $cluster.spec.location }}-{{ . }}
+
   namespace: openshift-machine-api
 spec:
   replicas: {{ $.Values.replicasPerZone }}
